@@ -6,7 +6,7 @@ function Header() {
   return (
     <div>
       <div className="header__left">
-        <img src="" alt="" />
+        <img src="https://image.flaticon.com/icons/png/512/61/61109.png" alt="Linkedin Logo" />
         <div className="header__search">
             <SearchIcon />
             <input type="text"></input>
