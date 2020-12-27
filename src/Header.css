@@ -1,5 +1,6 @@
 .header {
   display: flex;
+  justify-content: space-between;
 }
 .header__left {
   display: flex;
@@ -19,7 +20,7 @@
   height: 22px;
   color: gray;
   background-color: #eef3f8;
-  cursor : pointer;
+  cursor: pointer;
 }
 
 .header__search > input {
@@ -27,3 +28,20 @@
   border: none;
   background: none;
 }
+
+.header__right {
+  display: flex;
+}
+
+/* .nav__avatar {
+  height: 40px;
+}
+
+.avatar {
+  cursor: pointer;
+  transition: transform 450ms;
+}
+
+.avatar:hover {
+  transform: scale(1.25);
+} */
