@@ -1,9 +1,18 @@
 .header {
+  position : sticky;
+  top : 0;
   display: flex;
   justify-content: space-between;
+  border-bottom : 0.1px solid lightgray;
+  padding-top : 10px;
+  padding-bottom : 10px;
+  width : 100%;
+  z-index : 999;
 }
+
 .header__left {
   display: flex;
+  margin-left: 20px;
 }
 
 .header__left > img {
@@ -32,16 +41,3 @@
 .header__right {
   display: flex;
 }
-
-/* .nav__avatar {
-  height: 40px;
-}
-
-.avatar {
-  cursor: pointer;
-  transition: transform 450ms;
-}
-
-.avatar:hover {
-  transform: scale(1.25);
-} */

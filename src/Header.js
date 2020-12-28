@@ -2,6 +2,9 @@ import React from "react";
 import SearchIcon from "@material-ui/icons/Search";
 import HomeIcon from "@material-ui/icons/Home";
 import SupervisorAccountIcon from "@material-ui/icons/SupervisorAccount";
+import ChatIcon from "@material-ui/icons/Chat";
+import BusinessCenterIcon from "@material-ui/icons/BusinessCenter";
+import NotificationsIcon from "@material-ui/icons/Notifications";
 import HeaderOption from "./HeaderOption.js";
 import "./Header.css";
 
@@ -21,15 +24,14 @@ function Header() {
       <div className="header__right">
         <HeaderOption Icon={HomeIcon} title="Home" />
         <HeaderOption Icon={SupervisorAccountIcon} title="My Network" />
-      </div>
-      {/* <div className="avatar">
-        <img
-          onClick={() => window.open("https://zakirangwala.com")}
-          className="nav__avatar"
-          src="https://zakirangwala.com/assets/img/avatar.png"
-          alt="Netflix Avatar"
+        <HeaderOption Icon={BusinessCenterIcon} title="Jobs" />
+        <HeaderOption Icon={ChatIcon} title="Messaging" />
+        <HeaderOption Icon={NotificationsIcon} title="Notifications" />
+        <HeaderOption
+          avatar="https://zakirangwala.com/assets/img/avatar.png"
+          title="Me"
         />
-      </div> */}
+      </div>
     </div>
   );
 }
