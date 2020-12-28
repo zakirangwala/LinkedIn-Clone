@@ -76,6 +76,11 @@
   margin-top: 10px;
 }
 
+.sidebar__bottom > p {
+  font-size: 13px;
+  padding-bottom: 10px;
+}
+
 .sidebar__recentItem {
   display: flex;
   font-size: 13px;
@@ -86,9 +91,14 @@
   padding: 5px;
 }
 
-.sidebar__recentItem:hover{
+.sidebar__recentItem:hover {
   background-color: whitesmoke;
-  border-radius : 10px;
-  cursor : pointer;
-  color : black;
+  border-radius: 10px;
+  cursor: pointer;
+  color: black;
+}
+
+.sidebar__hash {
+  margin-right: 10px;
+  margin-left: 5px;
 }

@@ -14,10 +14,13 @@ function Sidebar() {
     <div className="sidebar">
       <div className="sidebar__top">
         <img
-          src="https://wallpaperaccess.com/full/746344.jpg"
+          src="https://images.unsplash.com/photo-1524046960467-39d55b270f83?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YXBwbGUlMjBwYXJrfGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80"
           alt="background-banner"
         />
-        <Avatar className="sidebar__avatar" />
+        <Avatar
+          className="sidebar__avatar"
+          src="https://zakirangwala.com/assets/img/avatar.png"
+        />
         <h2>Zaki Rangwala</h2>
         <h4>zakirangwala@gmail.com</h4>
       </div>
@@ -33,10 +36,10 @@ function Sidebar() {
       </div>
       <div className="sidebar__bottom">
         <p>Recent</p>
-        {recentItem('reactjs')}
-        {recentItem('programming')}
-        {recentItem('software development')}
-        {recentItem('graphic design')}
+        {recentItem("reactjs")}
+        {recentItem("programming")}
+        {recentItem("software development")}
+        {recentItem("graphic design")}
       </div>
     </div>
   );
