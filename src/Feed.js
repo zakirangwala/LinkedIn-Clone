@@ -1,6 +1,7 @@
 import React from "react";
 import CreateIcon from "@material-ui/icons/Create";
 import InputOption from "./InputOption.js";
+import Post from "./Post.js";
 import ImageIcon from "@material-ui/icons/Image";
 import SubscriptionsIcon from "@material-ui/icons/Subscriptions";
 import EventNoteIcon from "@material-ui/icons/EventNote";
@@ -29,6 +30,7 @@ function Feed() {
           />
         </div>
       </div>
+      <Post />
     </div>
   );
 }
