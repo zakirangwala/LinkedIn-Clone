@@ -1,13 +1,14 @@
 .header {
-  position : sticky;
-  top : 0;
+  position: sticky;
+  top: 0;
   display: flex;
+  background-color: white;
   justify-content: space-between;
-  border-bottom : 0.1px solid lightgray;
-  padding-top : 10px;
-  padding-bottom : 10px;
-  width : 100%;
-  z-index : 999;
+  border-bottom: 0.1px solid lightgray;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  z-index: 999;
 }
 
 .header__left {
