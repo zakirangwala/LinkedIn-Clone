@@ -1,12 +1,15 @@
-import React from 'react';
-import Header from './Header.js'
-// import { Counter } from './features/counter/Counter';
-import './App.css';
+import React from "react";
+import Header from "./Header.js";
+import Sidebar from "./Sidebar.js";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-        <Header />
+      <Header />
+      <div className="app__body">
+        <Sidebar />
+      </div>
     </div>
   );
 }
