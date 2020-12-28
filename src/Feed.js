@@ -30,7 +30,12 @@ function Feed() {
           />
         </div>
       </div>
-      <Post />
+      <Post
+        name="Elon Musk"
+        description="CEO of Tesla"
+        message="Hello World"
+        photoUrl="https://cdn.vox-cdn.com/thumbor/nDW7YqKV8soKsZSfRorGXJLSH50=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/22147179/1229892934.jpg"
+      />
     </div>
   );
 }
