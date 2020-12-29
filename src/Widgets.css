@@ -18,8 +18,12 @@
 
 .widgets__header > h2 {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: bold;
 }
+
+.widgets__header > .MuiSvgIcon-root {
+    cursor : pointer;
+  }
 
 .widgets__article {
   display: flex;
