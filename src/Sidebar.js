@@ -21,9 +21,9 @@ function Sidebar() {
           alt="background-banner"
         />
         <Avatar src={user.photoUrl} className="sidebar__avatar">
-          {user.displayName[0]}
+          {user.email[0]}
         </Avatar>
-        <h2>{user.email}</h2>
+        <h2>{user.displayName}</h2>
         <h4>{user.email}</h4>
       </div>
       <div className="sidebar__stats">

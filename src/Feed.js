@@ -8,9 +8,12 @@ import EventNoteIcon from "@material-ui/icons/EventNote";
 import CalendarViewDayIcon from "@material-ui/icons/CalendarViewDay";
 import { db } from "./firebase.js";
 import firebase from "firebase";
+import { useSelector } from "react-redux";
+import { selectUser } from "./features/userSlice";
 import "./Feed.css";
 
 function Feed() {
+  const user = useSelector(selectUser);
   const [input, setInput] = useState("");
   const [posts, setPosts] = useState([]);
 
@@ -30,11 +33,10 @@ function Feed() {
   const sendPost = (e) => {
     e.preventDefault();
     db.collection("posts").add({
-      name: "Jeff Bezos",
-      description: "this is a test",
+      name: user.displayName,
+      description: user.email,
       message: input,
-      photoUrl:
-        "https://cdn.vox-cdn.com/thumbor/nDW7YqKV8soKsZSfRorGXJLSH50=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/22147179/1229892934.jpg",
+      photoUrl:user.photoUrl || "",
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
     });
     setInput("");
