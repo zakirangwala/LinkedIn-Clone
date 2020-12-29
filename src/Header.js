@@ -6,9 +6,19 @@ import ChatIcon from "@material-ui/icons/Chat";
 import BusinessCenterIcon from "@material-ui/icons/BusinessCenter";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import HeaderOption from "./HeaderOption.js";
+import { useDispatch } from "react-redux";
+import { auth } from "./firebase.js";
+import { logout } from "./features/userSlice";
 import "./Header.css";
 
 function Header() {
+  const dispatch = useDispatch();
+
+  const logoutOfApp = () => {
+    dispatch(logout());
+    auth.signOut();
+  };
+
   return (
     <div className="header">
       <div className="header__left">
@@ -30,6 +40,7 @@ function Header() {
         <HeaderOption
           avatar="https://zakirangwala.com/assets/img/avatar.png"
           title="Me"
+          onClick={logoutOfApp}
         />
       </div>
     </div>
