@@ -12,7 +12,7 @@ function Sidebar() {
       <p>{topic}</p>
     </div>
   );
-  console.log(user);
+
   return (
     <div className="sidebar">
       <div className="sidebar__top">
@@ -20,9 +20,7 @@ function Sidebar() {
           src="https://images.unsplash.com/photo-1524046960467-39d55b270f83?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YXBwbGUlMjBwYXJrfGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80"
           alt="background-banner"
         />
-        <Avatar src={user.photoUrl} className="sidebar__avatar">
-          {user.email[0]}
-        </Avatar>
+        <Avatar src={user.photoUrl} className="sidebar__avatar"></Avatar>
         <h2>{user.displayName}</h2>
         <h4>{user.email}</h4>
       </div>
