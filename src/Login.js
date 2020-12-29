@@ -1,9 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import {login} from "./features/userSlice.js"
+import { auth } from "./firebase.js";
 import "./Login.css";
 
 function Login() {
-  const register = () => {};
-  const loginToApp = () => {};
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+  const [profilePic, setProfilePic] = useState("");
+  const dispatch = useDispatch();
+
+  const loginToApp = (e) => {
+    e.preventDefault();
+  };
+
+  const register = () => {
+    if (!name) {
+      return alert("Please enter your full name!");
+    }
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((userAuth) => {
+        userAuth.user
+          .updateProfile({
+            displayName: name,
+            photoURL: profilePic,
+          })
+          .then(() => {
+            dispatch(
+              login({
+                email: userAuth.user.email,
+                uid: userAuth.user.uid,
+                displayName: name,
+                photUrl: profilePic,
+              })
+            );
+          });
+      })
+      .catch((error) => alert(error));
+  };
 
   return (
     <div className="login">
@@ -13,11 +49,31 @@ function Login() {
       />
 
       <form>
-        <input placeholder="Full name" type="text" />
-        <input placeholder="Profile Picture URL" type="text" />
-        <input placeholder="Email" type="email" />
-        <input placeholder="Password" type="password" />
-        <button type="submit" OnClick={loginToApp}>
+        <input
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Full name*"
+          type="text"
+        />
+        <input
+          value={profilePic}
+          onChange={(e) => setProfilePic(e.target.value)}
+          placeholder="Profile Picture URL"
+          type="text"
+        />
+        <input
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Email*"
+          type="email"
+        />
+        <input
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Password*"
+          type="password"
+        />
+        <button type="submit" onClick={loginToApp}>
           Sign In
         </button>
       </form>
