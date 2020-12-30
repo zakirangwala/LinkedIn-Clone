@@ -39,7 +39,7 @@ function Header() {
         <HeaderOption Icon={NotificationsIcon} title="Notifications" />
         <HeaderOption
           avatar={true}
-          title="Me"
+          title="Logout"
           onClick={logoutOfApp}
         />
       </div>

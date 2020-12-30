@@ -45,8 +45,8 @@ function Login() {
               login({
                 email: userAuth.user.email,
                 uid: userAuth.user.uid,
-                displayName: name,
-                photUrl: profilePic,
+                displayName: userAuth.user.displayName,
+                photUrl: userAuth.user.photoURL,
               })
             );
           });
