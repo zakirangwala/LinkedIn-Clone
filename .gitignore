@@ -23,3 +23,8 @@ yarn-debug.log*
 yarn-error.log*
 
 .eslintcache
+
+.firebaserc
+firebase.json
+firebase-debug.log
+.firebase/
