@@ -12,7 +12,7 @@ function Sidebar() {
       <p>{topic}</p>
     </div>
   );
-
+  console.log(user);
   return (
     <div className="sidebar">
       <div className="sidebar__top">
